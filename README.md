@@ -101,6 +101,21 @@ func main() {
 
 ---
 
+### Joke API & Mini Chatbot
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /hello` | Original greeting |
+| `GET /joke` | Random dev joke (optional `?topic=go` or `programming` or `api`) |
+| `GET /chat?q=hello` | Minimal chatbot; try `q=hello`, `q=joke`, `q=who are you`, `q=bye` |
+
+**Examples**
+
+- `GET http://localhost:8080/joke` → `{"setup":"Why do Go developers prefer the beach?","punch":"Because of the shore (sure) types.","topic":"go"}`
+- `GET http://localhost:8080/chat?q=hello` → `{"reply":"Hi! I'm a tiny API bot...","your_message":"hello"}`
+
+---
+
 ## AI Prompt Journal
 
 | Prompt | AI Response Summary | Reflection |
